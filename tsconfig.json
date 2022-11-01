@@ -1,23 +1,23 @@
 {
-	"extends": "./.svelte-kit/tsconfig.json",
-	"compilerOptions": {
-		"allowJs": true,
-		"checkJs": true,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-		"sourceMap": true,
-		"strict": true,
-		"paths": {
-			"$lib": ["src/lib"],
-			"$lib/*": ["src/lib/*"],
-			"$blocks/*": ["src/blocks/*"],
-			"$actions/*": ["src/actions/*"],
-			"$utils/*": ["src/utils/*"],
-			"$types/*": ["src/types/*"],
-			"$stores/*": ["src/stores/*"],
-			"$icons/*": ["src/icons/*"]
-		  }
-	}
+  "extends": "./.svelte-kit/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "paths": {
+      "$lib": ["src/lib"],
+      "$lib/*": ["src/lib/*"],
+      "$blocks/*": ["src/blocks/*"],
+      "$actions/*": ["src/actions/*"],
+      "$utils/*": ["src/utils/*"],
+      "$types/*": ["src/types/*"],
+      "$stores/*": ["src/stores/*"],
+      "$icons/*": ["src/icons/*"]
+    }
+  }
 }
