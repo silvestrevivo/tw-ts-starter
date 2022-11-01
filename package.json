@@ -7,6 +7,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "playwright test",
+    "commit": "cz",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
@@ -25,6 +26,8 @@
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
     "autoprefixer": "^10.4.7",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^4.0.0",
@@ -42,5 +45,26 @@
     "typescript": "^4.7.4",
     "vite": "^3.1.0"
   },
-  "type": "module"
+  "type": "module",
+  "lint-staged": {
+    "src/**/*.(ts|json)": [
+      "npm run prettier -- --write",
+      "npm run eslint:fix --"
+    ],
+    "src/**/*.(svelte)": [
+      "npm run prettier -- --write",
+      "npm run eslint:fix --",
+      "pnpm check"
+    ],
+    "*.js": [
+      "prettier --write",
+      "npm run eslint:fix --"
+    ],
+    "*.md": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
